@@ -45,4 +45,3 @@ print(pizza_and_prices, "\n")
 ' If the colon came LAST, then it would select the LAST 3.
 three_cheapest = pizza_and_prices[:3] 
 print(three_cheapest, "\n")
-
