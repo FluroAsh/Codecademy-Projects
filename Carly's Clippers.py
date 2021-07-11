@@ -22,7 +22,7 @@ last_week = [2, 3, 5, 8, 4, 4, 6, 2]
 total_price = 0
 for i in prices:
   total_price += i
-print(total_price)
+print("Total Price: ${0}:".format(total_price))
 
 # Divide total price by number of indicies to create average_price
 average_price = total_price / len(prices)
@@ -33,7 +33,7 @@ new_prices = [
   i - 5 for i in prices
 ]
 
-print(new_prices)
+print("Prices cut by $5!", new_prices)
 
 ''' 
 ** ALTERNATIVE TO ABOVE **
@@ -62,7 +62,7 @@ cuts_under_30 = [
   if new_prices[i] < 30
 ]
 
-print(cuts_under_30)
+print("Cuts under $30:", cuts_under_30)
 
 '''
 ** ALTERNATIVE TO ABOVE **
@@ -71,5 +71,5 @@ for i in range(len(hairstyles)):
   if new_prices[i] < 30:
     cuts_under_30.append(hairstyles[i])
     
-print(cuts_under_30)
+print("Cuts under $30:", cuts_under_30)
 '''
