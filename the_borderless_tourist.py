@@ -11,7 +11,7 @@ def get_destination_index(destination):
   destination_index = destinations.index(destination)
   return destination_index
 
-# Find travelers location based on location index, then assign that index to a new value called traveler_destination_index
+# Find travelers location based on the location index, then assign that index to a new value called traveler_destination_index
 def get_traveler_location(traveler):
   traveler_destination = traveler[1]
   traveler_destination_index = get_destination_index(traveler_destination)
