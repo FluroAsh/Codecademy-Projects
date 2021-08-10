@@ -1,3 +1,7 @@
+'''This is the foundation for how apps like Uber, Yelp & other similiar services work. 
+Great example of how multiple functions form the basis for a users experience. But this
+is only the beginning, as this is not what the user SEES!'''
+
 # -- Setting Up... --
 # Declare lists containing destinations and our lucky test traveller!
 destinations = ['Paris, France','Shanghai, China','Los Angeles, USA','São Paulo, Brazi','Cairo, Egypt']
