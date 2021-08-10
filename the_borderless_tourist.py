@@ -99,6 +99,4 @@ def get_attractions_for_traveler(traveler):
 smills_france = get_attractions_for_traveler(['Dereck Smill', 'Paris, France', ['monument']])
 print(smills_france)
 
-# Program as a whole does not handle multiple tags very well. Further improvements can be made. 
-# Run into issues such as double printing 'the', and not having logic to handle inserting the 
-# full stop at the end of a series of attractions. 
+# Program as a whole does not handle multiple tags PERFECTLY. Further improvements can be made. 
