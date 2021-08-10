@@ -33,8 +33,7 @@ print(attractions)
 attractions = [[] for destination in destinations]'''
 
 # Gets the destination index and appends the attraction to the 
-# location of that index to our new list. Exit function if there's a 
-# ValueError.
+# location of that index to our new list. Exit function if there's a ValueError.
 def add_attraction(destination, attraction):
   try:
     destination_index = get_destination_index(destination)
