@@ -129,7 +129,9 @@ for transaction in daily_transactions:
   daily_transactions_split.append(transaction.split('|'))
 #print(daily_transactions_split)
 
-# This code block will loop through the outer lists, create a new empty list (transaction_clean) to store each element in the outer list, and then remove each new line ('\n') by replacing it with an empty string, removing all white space (' ') and finally appending the above to our transactions_clean list. 
+# This code block will loop through the outer lists, create a new empty list (transaction_clean) to store each element 
+# in the outer list, and then remove each new line ('\n') by replacing it with an empty string, removing all white space (' ') 
+# and finally appending the above to our transactions_clean list. 
 transactions_clean = []
 for transaction in daily_transactions_split:
   transaction_clean = [] # This contains one single element from our dataset
