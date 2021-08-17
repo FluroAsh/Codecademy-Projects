@@ -127,7 +127,6 @@ daily_transactions = daily_sales_replaced.split(',')
 daily_transactions_split = []
 for transaction in daily_transactions:
   daily_transactions_split.append(transaction.split('|'))
-#print(daily_transactions_split)
 
 # This code block will loop through the outer lists, create a new empty list (transaction_clean) to store each element 
 # in the outer list, and then remove each new line ('\n') by replacing it with an empty string, removing all white space (' ') 
@@ -137,6 +136,34 @@ for transaction in daily_transactions_split:
   transaction_clean = [] # This contains one single element from our dataset
   for data_point in transaction:
     transaction_clean.append(data_point.replace('\n', '').strip(' '))
-    transactions_clean.append(transaction_clean)
+  transactions_clean.append(transaction_clean)
 
-print(transactions_clean)
+customers = []
+sales = []
+thread_sold = []
+
+for transaction in transactions_clean:
+  customers.append(transaction[0]) # Append from index 0 (Customer Name)
+  sales.append(transaction[1]) # Index 1 ($ Sale)
+  thread_sold.append(transaction[2]) # Index 2 (Thread sold)
+
+total_sales = 0
+# Strips away all $'s and calculates the sum of our sales
+for sale in sales:
+  total_sales += float(sale.strip('$')) 
+
+thread_sold_split = []
+for thread in thread_sold:
+  for colour in thread.split('&'):
+    thread_sold_split.append(colour)
+
+#print(thread_sold_split)
+
+def colour_count(colour):
+  colour_total = 0
+  for thread_colour in thread_sold_split:
+    if colour == thread_colour:
+      colour_total += 1
+  return colour_total
+  
+print(colour_count('white'))
