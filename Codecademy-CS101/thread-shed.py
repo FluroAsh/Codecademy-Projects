@@ -158,8 +158,6 @@ for thread in thread_sold:
   for colour in thread.split('&'):
     thread_sold_split.append(colour)
 
-#print(thread_sold_split)
-
 # Calcualtes the colour count for each colour and returns the colour_total
 def colour_count(colour):
   colour_total = 0
@@ -167,11 +165,7 @@ def colour_count(colour):
     if colour == thread_colour:
       colour_total += 1
   return colour_total
-  
-#print(colour_count('white'))
 
 colours = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
-
 for colour in colours:
-  colour_total = colour_count(colour)
-  print('Thread Shed sold {} threads of {} today'.format(colour_total, colour))
+  print('Thread Shed sold {0} threads of {1} today'.format(colour_count(colour), colour))
