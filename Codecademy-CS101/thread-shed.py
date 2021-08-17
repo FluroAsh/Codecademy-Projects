@@ -152,6 +152,7 @@ total_sales = 0
 for sale in sales:
   total_sales += float(sale.strip('$')) 
 
+# Splits the combined strings with the '&' symbol into their own sub-lists 
 thread_sold_split = []
 for thread in thread_sold:
   for colour in thread.split('&'):
@@ -159,6 +160,7 @@ for thread in thread_sold:
 
 #print(thread_sold_split)
 
+# Calcualtes the colour count for each colour and returns the colour_total
 def colour_count(colour):
   colour_total = 0
   for thread_colour in thread_sold_split:
@@ -166,7 +168,7 @@ def colour_count(colour):
       colour_total += 1
   return colour_total
   
-print(colour_count('white'))
+#print(colour_count('white'))
 
 colours = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
 
