@@ -14,7 +14,7 @@ letters_to_points[''] = 0
 
 print(letters_to_points, '\n')
 
-# Words passed through this function, .get utilised to match the 'char' in our word, and return the value -- default value being '0' if there is no match. Returns 'point_total'
+# Words passed through this function; .get utilised to match the 'char' in our word, and return the value -- default value being '0' if there is no match. Returns 'point_total'
 def score_word(word):
   point_total = 0
   for char in word:
