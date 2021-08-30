@@ -29,7 +29,7 @@ player_to_words = {'player1': ['BLUE', 'TENNIS', 'EXIT'], 'wordNerd': ['EARTH', 
 
 player_to_points = {}
 
-# Function to take in the keys and values from 'player_to_words', add the totals baesd on the point values and allocate them to our dictionary 'player_to_points' respective of each player
+# Function to take in the keys and values from 'player_to_words', add the totals based on the point values and allocate them to our dictionary 'player_to_points' respective of each player
 def update_point_totals():
   for player, words in player_to_words.items():
     player_points = 0
