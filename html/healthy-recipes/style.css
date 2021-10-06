@@ -1,1 +1,27 @@
+img[src*='salad'] {
+  height: 450px;
+}
 
+.description {
+  font-size: 20px;
+}
+
+#cook-time {
+  font-weight: bold;
+}
+
+.ingredients li {
+  list-style: square;
+}
+
+p.time {
+  color: grey;
+}
+
+a.external-link {
+  color: SeaGreen;
+}
+
+h1, h2, p, li {
+  font-family: Helvetica;
+}
