@@ -12,15 +12,15 @@ class Computer
   def create(filename)
     @time = Time.now
     @files[filename] = @time
-    puts "#{filename} CREATED BY: \"#{@username}\" @#{@time}"
+    puts "\"#{filename}\" CREATED BY: \"#{@username}\" @#{@time}"
   end
 
   def Computer.get_users
     @@users
   end
 
-  def self.get_files
-    "#{@username} #{@files}"
+  def get_files
+    puts "#{@username.upcase} LOG: #{@files}"
   end
 
   # 1. Adds username to the end of @@users, copying last entry
@@ -47,8 +47,11 @@ puts ""
 
 puts "[**--CREATE-TEST--**]"
 john.create("test.txt")
+john.get_files
+puts ""
 sally.create("test2.txt")
-Computer.get_files
+sally.create("test3.txt")
+sally.get_files
 puts ""
 
 puts "[**--UPDATE-TEST--**]"
@@ -57,6 +60,5 @@ puts Computer.get_users
 puts ""
 
 puts "[**--DELETE-TEST--**]"
-my_computer.delete_user("Greg")
+john.delete_user("Greg")
 puts Computer.get_users
-puts ""
